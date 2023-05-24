@@ -10,6 +10,14 @@ namespace GameConsoleKwizy
     {
         static void Main(string[] args)
         {
+            ClickHandling clickHandling = new ClickHandling();
+            bool cycleWork = true;
+
+            while (cycleWork)
+            {
+                clickHandling.ShowsMap();
+                Console.ReadKey();
+            }
         }
     }
 }
