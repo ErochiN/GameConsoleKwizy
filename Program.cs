@@ -17,12 +17,12 @@ namespace GameConsoleKwizy
             while (cycleWork)
             {
                 levelTransition.ShowsMap();
-                clickHandling.OutputCoordinates();
+                levelTransition.OutputCoordinates();
 
-                Console.SetCursorPosition(clickHandling.playerPositionX, clickHandling.playerPositionY);
+                Console.SetCursorPosition(levelTransition.playerPositionX, levelTransition.playerPositionY);
                 Console.ForegroundColor = ConsoleColor.Yellow;
                 Console.Write("@");
-                clickHandling.MovesPlayer();
+                levelTransition.MovesPlayer();
 
                 levelTransition.SwitchLevel();
             }
