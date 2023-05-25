@@ -9,7 +9,7 @@ namespace GameConsoleKwizy
 {
     internal class LevelTransition : ClickHandling
     {
-        int levelNumber = 1;
+        private int levelNumber = 1;
 
         public void SwitchLevel() 
         {

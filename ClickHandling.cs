@@ -55,7 +55,7 @@ namespace GameConsoleKwizy
                 {
                     Console.ForegroundColor = ConsoleColor.White;
 
-                    if (maps[i, j] == '#')
+                    if (maps[i, j] == '#' || maps[i, j] == 'X')
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
                     }

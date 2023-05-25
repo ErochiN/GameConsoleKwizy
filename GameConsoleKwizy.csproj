@@ -47,6 +47,7 @@
     <Compile Include="ClickHandling.cs" />
     <Compile Include="LevelTransition.cs" />
     <Compile Include="Maps.cs" />
+    <Compile Include="MenuManagement.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
