@@ -10,13 +10,13 @@ namespace GameConsoleKwizy
     {
         static void Main(string[] args)
         {
-            ClickHandling clickHandling = new ClickHandling();
+            LevelTransition levelTransition = new LevelTransition(); 
+
             bool cycleWork = true;
-            clickHandling.ShowsMap();
 
             while (cycleWork)
             {
-                clickHandling.ShowsMap();
+                levelTransition.ShowsMap();
                 clickHandling.OutputCoordinates();
 
                 Console.SetCursorPosition(clickHandling.playerPositionX, clickHandling.playerPositionY);
@@ -24,7 +24,7 @@ namespace GameConsoleKwizy
                 Console.Write("@");
                 clickHandling.MovesPlayer();
 
-                
+                levelTransition.SwitchLevel();
             }
         }
     }

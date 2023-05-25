@@ -58,6 +58,7 @@ namespace GameConsoleKwizy
                 }
                 Console.WriteLine();
             }
+
         }
 
         public void OutputCoordinates()
