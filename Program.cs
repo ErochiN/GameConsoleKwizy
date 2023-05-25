@@ -12,11 +12,19 @@ namespace GameConsoleKwizy
         {
             ClickHandling clickHandling = new ClickHandling();
             bool cycleWork = true;
+            clickHandling.ShowsMap();
 
             while (cycleWork)
             {
                 clickHandling.ShowsMap();
-                Console.ReadKey();
+                clickHandling.OutputCoordinates();
+
+                Console.SetCursorPosition(clickHandling.playerPositionX, clickHandling.playerPositionY);
+                Console.ForegroundColor = ConsoleColor.Yellow;
+                Console.Write("@");
+                clickHandling.MovesPlayer();
+
+                
             }
         }
     }

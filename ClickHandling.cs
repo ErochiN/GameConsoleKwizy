@@ -9,21 +9,37 @@ namespace GameConsoleKwizy
     internal class ClickHandling : Maps
     {
         public char[,] maps = mapLevel1;
-        public int playerPositionX, playerPositionY;
+        public int playerPositionX = 2, playerPositionY = 2;
 
-        public void MovesPlayer() 
+        public void MovesPlayer()
         {
             ConsoleKeyInfo keyInfo = Console.ReadKey();
 
             switch (keyInfo.Key)
             {
                 case ConsoleKey.W:
+                    if (maps[playerPositionY - 1, playerPositionX] != '*')
+                    {
+                        playerPositionY--;
+                    }
                     break;
                 case ConsoleKey.S:
+                    if (maps[playerPositionY + 1, playerPositionX] != '*')
+                    {
+                        playerPositionY++;
+                    }
                     break;
                 case ConsoleKey.D:
+                    if (maps[playerPositionY, playerPositionX + 1] != '*')
+                    {
+                        playerPositionX++;
+                    }
                     break;
                 case ConsoleKey.A:
+                    if (maps[playerPositionY, playerPositionX - 1] != '*')
+                    {
+                        playerPositionX--;
+                    }
                     break;
             }
         }
@@ -31,6 +47,7 @@ namespace GameConsoleKwizy
         public void ShowsMap()
         {
             Console.Clear();
+            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 0);
 
             for (int i = 0; i < maps.GetLength(0); i++)
@@ -41,6 +58,18 @@ namespace GameConsoleKwizy
                 }
                 Console.WriteLine();
             }
+        }
+
+        public void OutputCoordinates()
+        {
+
+            Console.SetCursorPosition(45, 0);
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("X = " + playerPositionX);
+            Console.SetCursorPosition(45, 1);
+            Console.Write("Y = " + playerPositionY);
+            
+
         }
     }
 }
