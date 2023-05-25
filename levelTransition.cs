@@ -13,9 +13,13 @@ namespace GameConsoleKwizy
 
         public void SwitchLevel() 
         {
-            if (playerPositionX == 5 && playerPositionY == 5)
+            switch (playerPositionX, playerPositionY, levelNumber)
             {
-                MessageBox.Show("ALL OK");
+                case var n when (playerPositionX == 39 && playerPositionY == 7 && levelNumber == 1):
+                    maps = mapLevel2;
+                    playerPositionX = 2;
+                    levelNumber = 2;
+                    break;
             }
         }
     }

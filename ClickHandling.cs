@@ -47,13 +47,19 @@ namespace GameConsoleKwizy
         public void ShowsMap()
         {
             Console.Clear();
-            Console.ForegroundColor = ConsoleColor.White;
             Console.SetCursorPosition(0, 0);
 
             for (int i = 0; i < maps.GetLength(0); i++)
             {
                 for (int j = 0; j < maps.GetLength(1); j++)
                 {
+                    Console.ForegroundColor = ConsoleColor.White;
+
+                    if (maps[i, j] == '#')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Red;
+                    }
+
                     Console.Write(maps[i, j]);
                 }
                 Console.WriteLine();

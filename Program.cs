@@ -14,6 +14,8 @@ namespace GameConsoleKwizy
 
             bool cycleWork = true;
 
+            Console.CursorVisible = false;
+
             while (cycleWork)
             {
                 levelTransition.ShowsMap();
