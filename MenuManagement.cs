@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace GameConsoleKwizy
 {
-    internal class MenuManagement
+    internal class MenuManagement : LevelTransition
     {
         public string[] inventoryCells = new string[5];
         bool checkInventory;
@@ -42,7 +42,13 @@ namespace GameConsoleKwizy
                 {
                     inventoryCells[i] = subject;
                     checkInventory = true;
+                    break;
                 }
+            }
+            if (checkInventory == false) 
+            {
+                Console.SetCursorPosition(55, 10);
+                Console.WriteLine("Нет места в инвентаре");
             }
         }
     }

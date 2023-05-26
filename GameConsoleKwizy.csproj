@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="ClickHandling.cs" />
+    <Compile Include="ControlCenter.cs" />
+    <Compile Include="ItemManagement.cs" />
     <Compile Include="LevelTransition.cs" />
     <Compile Include="Maps.cs" />
     <Compile Include="MenuManagement.cs" />

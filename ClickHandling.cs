@@ -18,25 +18,25 @@ namespace GameConsoleKwizy
             switch (keyInfo.Key)
             {
                 case ConsoleKey.W:
-                    if (maps[playerPositionY - 1, playerPositionX] != '*')
+                    if (maps[playerPositionY - 1, playerPositionX] != '#')
                     {
                         playerPositionY--;
                     }
                     break;
                 case ConsoleKey.S:
-                    if (maps[playerPositionY + 1, playerPositionX] != '*')
+                    if (maps[playerPositionY + 1, playerPositionX] != '#')
                     {
                         playerPositionY++;
                     }
                     break;
                 case ConsoleKey.D:
-                    if (maps[playerPositionY, playerPositionX + 1] != '*')
+                    if (maps[playerPositionY, playerPositionX + 1] != '#')
                     {
                         playerPositionX++;
                     }
                     break;
                 case ConsoleKey.A:
-                    if (maps[playerPositionY, playerPositionX - 1] != '*')
+                    if (maps[playerPositionY, playerPositionX - 1] != '#')
                     {
                         playerPositionX--;
                     }
@@ -55,9 +55,14 @@ namespace GameConsoleKwizy
                 {
                     Console.ForegroundColor = ConsoleColor.White;
 
-                    if (maps[i, j] == '#' || maps[i, j] == 'X')
+                    if (maps[i, j] == 'П' || maps[i, j] == 'X')
                     {
                         Console.ForegroundColor = ConsoleColor.Red;
+                    }
+
+                    if (maps[i, j] == 'O')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
                     }
 
                     Console.Write(maps[i, j]);
